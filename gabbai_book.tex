@@ -1,0 +1,221 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage{polyglossia}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\setdefaultlanguage{hebrew}
+\setotherlanguage{english}
+\RequirePackage{fontspec}
+%\usepackage{tabularx}
+\setmainfont[
+BoldFont={Shlomo Bold},
+ItalicFont={Shlomo semiStam}	
+]{Shlomo}
+\setsansfont{Mekorot-Rashi}
+
+\newfontfamily\englishfont{EB Garamond}
+
+\newcommand{\englishinst}[1]{
+	\begin{minipage}{\textwidth}
+		\begin{english}\raggedright\centering
+		%	\vspace{4pt}
+			%\begin{footnotesize}
+			\textit{#1}
+				
+				\vspace{2pt}
+			%\end{footnotesize}
+		\end{english}
+	\end{minipage}
+}
+
+\newcommand{\rashi}[1]{%\begin{scriptsize}
+		\textsf{#1}}
+
+\newcommand{\kahal}{\rashi{קהל׃}
+}
+
+\newcommand{\eng}[1]{\begin{english}\beginL #1 \endL\end{english}}
+
+\newcommand{\enginline}[1]{
+\begin{large}
+	\eng{\textit{#1}}
+\end{large}
+}
+
+\newcommand{\ploni}{(\rashi{פב״פ})
+}
+
+\begin{document}
+
+\title{\eng{Gabbai's Reference for the Trad Egal Shteibel
+}}
+
+\author{\eng{Prepared by Nathan Kasimer}}
+
+\date{\eng{Lakeview, Chicago, Illinois}}
+
+\maketitle
+
+\eng{\tableofcontents}
+
+%\section{\eng{Blessings for Torah Reading}}
+\eng{\section{Calling Aliyot}}
+
+\begin{large}\centering
+	\englishinst{On Shabbat or Festival Mornings:}
+	וְיַעֲזוֹר וְיָגֵן וְיוֹשִֽׁיעַ לְכׇל־הַחוֹסִים בּוֹ וְנֹאמַר אָמֵן׃\\
+	
+	 \englishinst{At other times:}
+	וְתִגָּלֶה וְתֵרָאֶה מַלְכוּתוֹ עָלֵֽינוּ בִּזְמַן קָרוֹב וְיָחֹן פְּלֵטָתֵֽנוּ וּפְלֵטַת עַמּוֹ בֵּית יִשְׂרָאֵל לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים וּלְרָצוֹן׃ וְנֹאמַר אָמֵן׃\\
+
+\englishinst{Continue here:}
+הַכֹּל הָבוּ גוֹדֶל לֵאלֹהֵֽינוּ וּתְנוּ כָבוֹד לַתּוֹרָה׃\\
+
+\vspace{6pt}\englishinst{When a Kohen is present and called for the first aliya:}
+ כֹּהֵן קְרָב יַעֲמֹד \eng{/} תַּעֲמֹד \eng{/} נָא לַעֲמֹד \ploni הַכֹּהֵן.\\
+\vspace{6pt}\englishinst{If no Kohen is present, anyone may be called for any aliya without regard to tribal status. They are called as follows:}
+אֵין כַּאן כֹּהֵן, יַעֲמֹד \eng{/} תַּעֲמֹד \eng{/} נָא לַעֲמֹד\\
+\ploni
+בִּמְקוׂם כֹּהֵן\\
+
+\vspace{6pt}\englishinst{Continue here:}
+בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ׃\\
+
+\vspace{6pt}\englishinst{The congregation says, and the Gabbai repeats after them:}
+וְאַתֶּם֙ הַדְּבֵקִ֔ים בַּייָ֖ אֱלֹהֵיכֶ֑ם חַיִּ֥ים כֻּלְּכֶ֖ם הַיּֽוֹם׃\\
+
+\vspace{6pt}\englishinst{If a Kohen is present but no Levi is, the Kohen who had the first aliya should be called for the Levi aliya as well, as follows:}
+יַעֲמֹד \eng{/} תַּעֲמֹד \eng{/} נָא לַעֲמֹד כֹּהֵן בִּמְקוֹם לֵוִי׃\\
+
+\vspace{6pt}\englishinst{Subsequent aliyot should be called as follows:}
+יַעֲמֹד \eng{/} תַּעֲמֹד \eng{/} נָא לַעֲמֹד \ploni \\
+\englishinst{...followed by the aliya number. When a Levi is present and called for the second aliya, the number may be omitted since their name designates that it is the Levi aliya.}
+\end{large}
+
+\eng{\section{Blessings for Torah Reading}}
+
+\begin{center}
+	\begin{large}
+	\englishinst{The person with the aliya touches the beginning spot of the aliya with their tzitzit and kisses it, and says:}
+		בָּרְכוּ אֶת־יְיָ הַמְבֹרָךְ׃\\
+		
+	\vspace{6pt}	\englishinst{The congregation responds:}
+		בָּרוּךְ יְיָ הַמְבֹרָךְ לְעוֹלָם וָעֶד:\\
+		
+		\vspace{6pt}\englishinst{The person with the aliya repeats after them:}
+		בָּרוּךְ יְיָ הַמְבֹרָךְ לְעוֹלָם וָעֶד:\\
+		
+	
+
+			\vspace{6pt}
+	\englishinst{The person with the aliya continues:}
+	בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר בָּֽחַר בָּֽנוּ מִכׇּל־הָעַמִּים
+	וְנָֽתַן לָֽנוּ אֶת־תּוֹרָתוֹ׃ בָּרוּךְ אַתָּה יְיָ נוֹתֵן הַתּוֹרָה׃\\
+			\vspace{8pt}
+	\englishinst{After the reading, the person with the aliya touches the spot the aliya ended with their tzitzit, kisses it, and blesses as follows:}
+	בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָֽתַן לָֽנוּ תּוֹרַת אֱמֶת
+	וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ׃ בָּרוּךְ אַתָּה יְיָ נוֹתֵן הַתּוֹרָה׃
+	\end{large}
+\end{center}
+
+\eng{\section{\d{H}atzi Kaddish}}
+
+\englishinst{After the seventh aliya, the reader leads Kaddish.}
+\begin{large}
+יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵיהּ רַבָּא (\kahal אָמֵן)
+בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכׇל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב׃ וְאִמְרוּ אָמֵן׃\\
+\textbf{\kahal
+	אָמֵן׃ יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא}\\
+יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר וְיִתְעַלֶּה וְיִתְהַלַּל שְׁמֵיהּ דְּקֻדְשָׁא
+\textbf{בְּרִיךְ הוּא}
+׃ *לְעֵֽלָּא מִן כׇּל־בִּרְכָתָא
+(*\rashi{בעשי״ת׃}
+לְעֵֽלָּא לְעֵֽלָּא מִכׇּל־בִּרְכָתָא) וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ (\kahal אָמֵן)
+\end{large}
+
+\eng{\section{Blessings for Haftarah}}
+
+\begin{large}
+\englishinst{Before the Haftarah:}
+בָּר֙וּךְ אַתָּ֤ה יְ֙יָ אֱלֹ֙הֵֽינוּ֙ מֶ֣לֶךְ הָעוֹלָ֔ם אֲשֶׁ֤ר בָּחַר֙ בִּנְבִיאִ֣ים טוֹבִ֔ים וְרָצָ֥ה בְדִבְרֵיהֶ֖ם הַנֶּֽאֱמָרִ֣ים בֶּאֱמֶ֑ת בָּר֨וּךְ אַתָּ֜ה יְיָ֗ הַבּוֹחֵר֚ בַּתּוֹרָה֙ וּבְמֹשֶׁ֣ה עַבְדּ֔וֹ וּבְיִשְׂרָאֵ֣ל עַמּ֔וֹ וּבִנְבִיאֵ֥י הָֽאֱמֶ֖ת וָצֶֽדֶק׃\\
+
+\englishinst{After the Haftarah:}
+בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם צוּר כׇּל־הָעוֹלָמִים צַדִּיק בְּכׇל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאוֹמֵר וְעוֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכׇּל־דְּבָרָיו אֱמֶת וָצֶֽדֶק׃ נֶאֱמָן אַתָּה הוּא יְיָ אֱלֹהֵֽינוּ וְנֶאֱמָנִים דְּבָרֶֽיךָ וְדָבָר אֶחָד מִדְּבָרֶֽיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶֽלֶךְ נֶאֱמָן וְרַחֲמָן אַֽתָּה׃ בָּרוּךְ אַתָּה יְיָ הָאֵל הַנֶּאֱמָן בְּכׇל־דְּבָרָיו׃\\
+רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּֽינוּ וְלַעֲלֽוּבַת נֶֽפֶשׁ תּוֹשִֽׁיעַ בִּמְהֵרָה בְיָמֵֽינוּ׃ בָּרוּךְ אַתָּה יְיָ מְשַׂמֵּֽחַ צִיּוֹן בְּבָנֶֽיהָ׃\\
+שַׂמְּחֵֽנוּ יְיָ אֱלֹהֵֽינוּ בְּאֵלִיָּֽהוּ הַנָּבִיא עַבְדֶּֽךָ וּבְמַלְכוּת בֵּית דָּוִד מְשִׁיחֶֽךָ בִּמְהֵרָה יָבֹא וְיָגֵל לִבֵּֽנוּ עַל כִּסְאוֹ לֹא יֵשֵׁב זָר וְלֹא יִנְחֲלוּ עוֹד אֲחֵרִים אֶת־כְּבוֹדוֹ כִּי בְשֵׁם קׇדְשְׁךָ נִשְׁבַּעְתָּ לוֹ שֶׁלֹּא יִכְבֶּה נֵרוֹ לְעוֹלָם וָעֶד׃ בָּרוּךְ אַתָּה יְיָ מָגֵן דָּוִד׃
+
+
+\englishinst{On Festivals and \d{H}ol HaMo'ed Sukkot, continue below.  On Shabbat, conclude as follows:}
+עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם הַשַּׁבָּת הַזֶּה שֶׁנָּתַֽתָּ לָֽנוּ יְיָ אֱלֹהֵֽינוּ לִקְדֻשָּׁה וְלִמְנוּחָה לְכָבוֹד וּלְתִפְאָֽרֶת׃ עַל הַכֹּל יְיָ אֱלֹהֵֽינוּ אֲנַֽחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ יִתְבָּרַךְ שִׁמְךָ בְּפִי כׇל־חַי תָּמִיד לְעוֹלָם וָעֶד׃ בָּרוּךְ אַתָּה יְיָ מְקַדֵּשׁ הַשַּׁבָּת׃\\
+
+\englishinst{On Festivals and \d{H}ol HaMo'ed Sukkot conclude as follows. On Shabbat include the words in parentheses:}
+עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם (הַשַּׁבָּת וְעַל יוֹם)\\
+	
+\begin{tabular}{c | c | c | c}
+
+\enginline{Pesa\d{h}}&\enginline{Shavu'ot}&\enginline{Sukkot}&\enginline{Shemini Atzeret}\\	
+			חַג הַמַּצּוֹת & חַג הַשָּׁבֻעוֹת & חַג הַסֻּכּוֹת & שְׁמִינִי חַג הָעֲצֶֽרֶת\\ 
+\end{tabular}
+
+	הַזֶּה שֶׁנָּתַֽתָּ לָֽנוּ יְיָ אֱלֹהֵֽינוּ (לִקְדֻשָּׁה וְלִמְנוּחָה) לְכָבוֹד וּלְתִפְאָֽרֶת׃ עַל הַכֹּל יְיָ אֱלֹהֵֽינוּ אֲנַֽחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ יִתְבָּרַךְ שִׁמְךָ בְּפִי כׇל־חַי תָּמִיד לְעוֹלָם וָעֶד׃ בָּרוּךְ אַתָּה יְיָ מְקַדֵּשׁ (הַשַּׁבָּת וְ)יִשְׂרָאֵל וְהַזְּמַנִים׃
+\end{large}
+
+\eng{\section{Misheberakh for the Sick}}
+
+\begin{large}
+	\englishinst{We generally recite the misheberakh for the sick after the 7th aliya is called. After they are called but before the berakha is recited, cover the Torah and say the following:}
+מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, שָׂרָה רִבְקָה רָחֵל וְלֵאָה, הוּא יְבָרֵךְ וִירַפֵּא אֶת־הַחוׂלִים...בְּתוֹךְ שְׁאָר חוֹלֵי יִשְׂרָאֵל בַּעֲבוּר שֶׁאָנוּ מִתְפַּלְלִים בַּעֲבוּרָם. בִּשְׂכַר זֶה, הַקָּדוֹשׁ בָּרוּךְ הוּא יִמָּלֵא רַחֲמִים עָלֵיהֶם, לְהַחֲלִימָם וּלְרַפְּאֹתָם וּלְהַחֲזִיקָם וּלְהַחֲיוֹתָם, וְיִשְׁלַח לָהֶם מְהֵרָה רְפוּאָה שְׁלֵמָה מִן הַשָּׁמַיִם, רְפוּאַת הַנֶּֽפֶשׁ וּרְפוּאַת הַגּוּף 
+
+\begin{tabular}{c | c | c}
+	\enginline{On Shabbat:}&\enginline{On Festivals:}&\enginline{On Shabbat \& Festivals:}\\
+	‏שַׁבָּת הִיא מִלִּזְעוֹק & יוֹם טוֹב הוּא מִלִּזְעוֹק & שַׁבָּת וְיוֹם טוֹב הֵם מִלִּזְעוֹק\\
+	\end{tabular}
+
+ וּרְפוּאָה קְרוֹבָה לָבוֹא, הַשְׁתָּא בַּעֲגָלָא וּבִזְמַן קָרִיב. וְנֹאמַר: אָמֵן׃
+ \end{large}
+
+\eng{\section{Gomel}}
+	
+\begin{large}
+	\englishinst{A person returning from a dangerous journey, leaving prison, or recovering from serious illness blesses as follows:}
+	בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַֽנִי כׇּל־טוֹב׃\\
+	
+	\englishinst{The congregation responds:}
+	מִי שֶׁגְּמׇלְךָ/שֶׁגְּמָלֵךְ כׇּל־טוֹב הוּא יִגְמׇלְךָ/שֶׁגְּמָלֵךְ כׇּל־טוֹב סֶֽלָה׃
+\end{large}
+
+%\eng{\section{Misheberakhs for an Aufruf}}
+
+
+%\begin{large}
+%מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב הוּא יְבָרֵךְ אֶת־הֶחָתָן \ploni וְאֶת־הַכַּלָּה \ploni בַּעֲבוּר שֶׁנָדְרוּ... בִּשְׂכַר זֶה הַקָדוֹשׁ בָּרוּךְ הוּא יְבָרֵךְ אוֹתָם וְיִתֵּן לָהֶם בְּרָכָה וְהַצְלָחָה בְּכׇל־מַעֲשֵׂה יְדֵיהֶם וְיִזְכוּ לִבְנוֹת בַּֽיִת בְּיִשְׂרָאֵל לְשֵׁם וְלִתְהִלָה וְנֹאמַר אָמֵן:
+%
+%
+%\end{large}
+
+%\eng{\section{Misheberakh for New Parents}}
+
+%
+%\begin{large}
+%\englishinst{For the mother of a boy:}
+%מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, שָׂרָה רִבְקָה רָחֵל וְלֵאָה, הוּא יְבָרֵךְ אֶת־הָאִשָׁה הַיוֹלֶֽדֶת
+%\ploni
+%עִם בְּנָהּ הַנוֹלָד בְּמַזָל טוֹב בַּעֲבוּר (שֶׁבַּעֲלָהּ נָדַר) (שֶׁהִיא נוֹדֶֽרֶת) צְדָקָה בַּעֲדָן. . בִּשְׂכַר זֶה הַקָדוֹשׁ בָּרוּךְ הוּא יְהִי בְּעֶזְרָם וְיִשְׁמְרֵם וִיזַכֶּה אֶת־הָאֵם לְגַדֵל אֶת־בְּנָהּ בַּטוֹב וּבַנְעִימִים וּלְהַדְרִיכוֹ בְּאֹֽרַח מִישׁוֹר לַתּוֹרָה לְחֻפָּה וּלְמַעֲשִׂים טוֹבִים. וְנֹאמַר אָמֵן׃\\
+%
+%\englishinst{For the mother of a girl:}
+%מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, שָׂרָה רִבְקָה רָחֵל וְלֵאָה, הוּא יְבָרֵךְ אֶת־הָאִשָׁה הַיוֹלֶֽדֶת
+%\ploni
+%עִם בִּתָּהּ הַנוֹלֶֽדֶת בְּמַזָל טוֹב (וְיִקָרֵא שְׁמָהּ בְּיִשְׂרָאֵל \ploni ) בַּעֲבוּר (שֶׁבַּעֲלָהּ נָדַר) (שֶׁהִיא נוֹדֶֽרֶת) צְדָקָה בַּעֲדָן. בִּשְׂכַר זֶה הַקָדוֹשׁ בָּרוּךְ הוּא יְהִי בְּעֶזְרָן וְיִשְׁמְרֵן וִיזַכֶּה אֶת־הָאֵם לְגַדֵל אֶת־בִּתָּהּ בַּטוֹב ובַנְעִימִים וּלְהַדְרִיכָה בְּאֹֽרַח מִישׁוֹר לְמִצְוֹת לְחֻפָּה וּלְמַעֲשִׂים טוֹבִים. וְנֹאמַר אָמֵן׃
+%\end{large}
+%\eng{\section{Misheberakhs for Bar- and Bat-Mitzvas}}
+
+%\englishinst{For a Bar-Mitzva:}
+%מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, שָׂרָה רִבְקָה רָחֵל וְלֵאָה, הוּא יְבָרֵךְ אֶת
+%\rashi{(פב״פ)}
+%שֶׁהִגִֽיעוּ יָמָיו לִהְיוֹת בַּר מִצְוָה וְעָלָה הַיוֹם לַתּוֹרָה בַּפַּֽעַם הָרִאשׁוֹנָה. בִּשְׂכַר זֶה הַקָדוֹשׁ בָּרוּךְ הוּא יִשְׁמְרֵֽהוּ וִיחַיֵֽהוּ וִיכוֹנֵן אֶת־לִבּוֹ לִהְיוֹת שָׁלֵם עִם יְיָ וְלָלֶֽכֶת בִּדְרָכָיו וְלִשְׁמֹר מִצְוֹתָיו כׇּל־הַיָמִים וְנֹאמַר אָמֵן׃\\
+%
+%\englishinst{For a Bat-Mitzva:}
+%מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, שָׂרָה רִבְקָה רָחֵל וְלֵאָה, הוּא יְבָרֵךְ אֶת
+%\rashi{(פב״פ)}
+%שֶׁהִגִֽיעוּ יָמָיו לִהְיוֹת בַּת מִצְוָה וְעָלָה הַיוֹם לַתּוֹרָה בַּפַּֽעַם הָרִאשׁוֹנָה לָתֵת שֶֽׁבַח וְהוֹדָאָה לְהַשֵׁם יִתְבָּרַךְ עַל כׇּל־הַטוֹבָה אֲשֶׁר עָשָׂה לוֹ (וְנָדַר...) בִּשְׂכַר זֶה הַקָדוֹשׁ בָּרוּךְ הוּא יִשְׁמְרֵֽהוּ וִיחַיֵֽהוּ וִיכוֹנֵן אֶת־לִבּוֹ לִהְיוֹת שָׁלֵם עִם יְיָ וְלָלֶֽכֶת בִּדְרָכָיו וְלִשְׁמֹר מִצְוֹתָיו כׇּל־הַיָמִים וְנֹאמַר אָמֵן׃\\
+\end{document}

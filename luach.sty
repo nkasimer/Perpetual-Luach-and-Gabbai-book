@@ -1,0 +1,37 @@
+\usepackage{polyglossia}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\usepackage{hyperref}
+
+
+\pagestyle{fancy}
+
+\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
+\bibliography{lit_halakhot_sources}
+%\usepackage[parfill]{parskip}
+
+\newcommand{\hebword}[1]{‎\begin{hebrew}\beginR #1 \endR\end{hebrew}}
+
+\setmainfont{EB Garamond}
+
+\newfontfamily\hebrewfont{Shlomo}
+
+\newcommand{\heth}{\d{h}}
+\newcommand{\bigheth}{\d{H}}
+\newcommand{\ayin}{'}
+\newcommand{\smallayin}{'}
+
+\newcommand{\amidah}{Amidah\space}
+\newcommand{\amidahnospace}{Amidah}
+\newcommand{\aliya}{aliya}
+\newcommand{\aliyot}{aliyot}
+\newcommand{\SA}{Shul\d{h}an Arukh}
+\newcommand{\arvit}{Arvit}
