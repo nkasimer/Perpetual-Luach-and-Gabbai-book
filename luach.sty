@@ -20,7 +20,13 @@
 
 \newcommand{\hebword}[1]{‎\begin{hebrew}\beginR #1 \endR\end{hebrew}}
 
-\setmainfont{EB Garamond}
+\setmainfont{EBGaramond}[
+Path=./EBGaramond-0.016/otf/,
+Extension=.otf,
+UprightFont=*12-Regular,
+ItalicFont=*12-Italic,
+RawFeature={+cv11,+liga,+clig,+dlig,+calt}
+]
 
 \newfontfamily\hebrewfont{Shlomo}
 
