@@ -1,0 +1,19 @@
+\chapter{Introduction}
+
+This lua\d{h} is intended to make navigating the Jewish year easier, primarily for gabbaim.  Existing lua\d{h}s, taking advantage of modern printing, are generally disposable items, intended for only one year. Historically, though, calendar texts often described the Jewish calendar in general, but lacked the granular detail for gabbaim that modern lua\d{h}s have.  This lua\d{h} attempts to combine these two, by providing a detailed lua\d{h} for every possible year in the Jewish calendar. This will enable gabbaim to annotate their community's customs and to provide a comprehensive picture of the Jewish liturgy throughout the year, every year.  Additionally, this layout enables making year-specific lua\d{h}s relatively straightforward.
+
+Hebcal, Leo Levi's \textit{Halakhic Times}, and the Zmanim Python library have been very helpful in generating this text.  The Miles B. Cohen's Lua\d{h} and the Ezras Torah Luach were consulted in determining relevant content to include.
+
+With the open-source texts, users can make their own version, to reflect the customs of their own community and meet their own needs.
+
+\chapter{Usage Guide}
+
+This text contains a number of sections which inter-relate to each other. First, the lua\d{h} itself. The lua\d{h} has a table for determining the \textit{kevi`a} of years until 6000AM. Each year-type encodes all necessary information to figure out how holidays fall in that year\textemdash what day of the week all holidays will fall, the length of months, whether it is a leap year, etc. Then the lua\d{h} has a table of molads for each month. These two are tied together by information about how each kevi`a is determined from the relevant molads and the 19-year cycle of leap months. To assist in navigating the lua\d{h}, a table of Gregorian dates for selected holidays is provided. With the information there, dates of minor holidays (or holidays whose date is trivial to compute from another holiday) can be determined by looking at the data for the kevi`a of that year.
+
+Then comes the lua\d{h} details for each year. Each year-type has thorough information on the pattern of liturgy and ritual for that year. Gabbaim can annotate something that needed extra attention one year, in a future year. I suggest using a book dart or similar bookmark to move through the year. One could also keep the lua\d{h} in two binders, and put the information for other years' kevi`ot on the shelf, so only the relevant information is on hand.
+
+To complete the lua\d{h} is a table (or tables) of zmanim. The intention is that users will use the script in the source code to generate zmanim tables relevant for their location.  The zmanim are generalized to the Gregorian calendar in any year.
+
+To give a fairly complicated usage example: to determine the havdala time of Shabbat \d{H}anukka in an arbitrary year, look up the year in the table of Gregorian dates, and see there what the kevi`a is (conveniently provided in the same table). Note the Gregorian date and day of the week, add however many days is necessary to reach Shabbat, and look up that date in the table of Zmanim.
+
+Following the lua\d{h} itself are a halakhic guide to liturgy and relevant liturgical texts for Gabbaim. Since this text is not intended as a disposable one-year lua\d{h} and will (I hope) be a handy reference for gabbaim, it seemed logical to include other texts gabbaim have handy. Many gabbaim have a ``gabbai book'' or a siddur plus a lua\d{h}, I hope this text can replace both.
