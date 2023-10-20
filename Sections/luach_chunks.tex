@@ -157,16 +157,45 @@ Shabbat Sha\d{h}arit, with additions for the 10 Days of Repentence in the Amidah
 }
 \newcommand{\haazinuShuvaMotzeiRH}{}
 
+\newcommand{\normalshabbosarvit}{Kabbalat Shabbat and Arvit as usual.\space}
+\newcommand{\normalshabbatshacharit}{Pesukei DeZimra and Sha\d{h}arit as usual.\space}
+\newcommand{\normalshabbatmusaf}{Shabbat Musaf as usual.}
+
+\newcommand{\mevarekhim}[4]{The new month of #1 is blessed. See page \pageref{molads} for the molad. Rosh \d{H}odesh is #2.\\
+\hebword{ראש חודש #3 יהיה #4}
+}
+
+\newcommand{\shabbatbereshit}[5]{%date, haftara, days of RCh eng, days of RCh heb, omit tzidkaskha
+	\textbf{Shabbat Bereshit \textendash\space #1 Tishrei}
+
+\normalshabbosarvit \normalshabbatshacharit
+\leinBereshit
+
+Note that different \d{h}umashim have different aliya breakdowns for this parasha. Make sure to check with leiners that they learned the correct portion. #2
+
+\mevarekhim{Mar\d{h}eshvan (not ``Cheshvan'')}{#3}{מרחשון}{#4}. Av HaRa\d{h}amim is omitted. \normalshabbatmusaf
+
+Min\d{h}a for Shabbat. #5
+}
+\newcommand{\shabbereshitmacharchodesh}{\shabbatbereshit{29}{\haftMacharChodesh Some read the Haftara for Bereishit even when it falls on Ma\d{h}ar \d{H}odesh (Isaiah 42:5\textendash 43:10)}{Sunday and Monday}{ביום ראשון וביום שני}{\textit{Tzidkatekha} is omitted for Erev Rosh \d{H}odesh.}
+}
+
 \newcommand{\tishreiShab}{
 	\roshhashanashabbat
 	
 	\tzomGedalia{Monday}{}{3}
+	%tishrei holidays here
+	\shabbereshitmacharchodesh
 }
 
 \newcommand{\tishreiMon}{
 \roshhashana{Monday}{Tuesday}{The holiday is concluded with Arvit for weekdays. Vihi No`am is not recited. Havdala is on wine only, without introductory verses, flame or spices.}
 
-\tzomGedalia{Wednesday}{}{3}}
+\tzomGedalia{Wednesday}{}{3}
+
+%tishrei holidays here
+
+}
 
 \newcommand{\tishreiTues}{
 \roshhashana{Tuesday}{Wednesday}
