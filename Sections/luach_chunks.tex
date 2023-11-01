@@ -188,6 +188,7 @@ Arvit for the conclusion of Shabbat as usual.  \textit{Vihi no`am} is said.}
 \newcommand{\normalshabbosarvit}{Kabbalat Shabbat and Arvit as usual.\space}
 \newcommand{\normalshabbatshacharit}{Pesukei DeZimra and Sha\d{h}arit as usual.\space}
 \newcommand{\normalshabbatmusaf}{Shabbat Musaf as usual.}
+\newcommand{\normalshabbatmincha}{Shabbat Min\d{h}a as usual.}
 
 \newcommand{\mevarekhim}[4]{The new month of #1 is blessed. See page \pageref{molads} for the molad. Rosh \d{H}odesh is #2.\\
 \hebword{ראש חודש #3 יהיה #4}
@@ -261,4 +262,64 @@ Davening on Rosh \d{H}odesh is the same as the first day of Rosh \d{H}odesh, exc
 \haazinuShuvaMotzeiRH
 
 \tzomGedalia{Sunday}{Because the 3rd of Tishrei falls on Shabbat, the fast is pushed off to Sunday.}{4}
+}
+
+\newcommand{\shabbatnoach}[1]{%date
+	\textbf{Shabbat Noa\d{h} \textendash\space #1 Marcheshvan}
+	
+	\normalshabbosarvit \normalshabbatshacharit
+	
+	\leinNoach
+	
+	\haftNoach Some congregations say a special misheberakh for those fasting BeHaB.
+		
+	\normalshabbatmusaf
+	
+	\normalshabbatmincha
+}
+
+\newcommand{\shabbatlekhlekha}[1]{%date
+	\textbf{Shabbat Lekh Lekha \textendash\space #1 Marcheshvan}
+	
+	\normalshabbosarvit \normalshabbatshacharit
+	
+	\leinLechLecha
+	
+	\haftLechLecha
+	
+	\normalshabbatmusaf
+	
+	\normalshabbatmincha
+}
+
+\newcommand{\shabbatvayera}[1]{%date
+	\textbf{Shabbat Vayera \textendash\space #1 Marcheshvan}
+	
+	\normalshabbosarvit \normalshabbatshacharit
+	
+	\leinVayera
+	
+	\haftVayera
+	
+	\normalshabbatmusaf
+	
+	\normalshabbatmincha
+}
+
+\newcommand{\marcheshvanSunMon}{
+Arvit for Motzaei Shabbat includes \textit{ya`ale veyavo}.
+
+\textbf{Rosh \d{H}odesh Mar\d{h}eshvan, First day (30 Tishrei)}
+
+\roshchodeshday{Sunday}
+
+\textbf{Rosh \d{H}odesh Mar\d{h}eshcvan, Second Day (1 Mar\d{h}eshvan)}
+
+\roshchodeshdaytwo{Monday}
+
+\shabbatnoach{6}
+
+\shabbatlekhlekha{13}
+
+\shabbatvayera{20}
 }
