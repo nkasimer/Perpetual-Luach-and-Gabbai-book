@@ -191,7 +191,7 @@ Arvit for the conclusion of Shabbat as usual.  \textit{Vihi no`am} is said.}
 \newcommand{\normalshabbatmincha}{Shabbat Min\d{h}a as usual.}
 
 \newcommand{\mevarekhim}[4]{The new month of #1 is blessed. See page \pageref{molads} for the molad. Rosh \d{H}odesh is #2.\\
-\hebword{ראש חודש #3 יהיה #4}
+\hebword{ראש חודש #3 יהיה #4}\\
 }
 
 \newcommand{\shabbatbereshit}[5]{%date, haftara, days of RCh eng, days of RCh heb, omit tzidkaskha
@@ -293,7 +293,7 @@ Davening on Rosh \d{H}odesh is the same as the first day of Rosh \d{H}odesh, exc
 }
 
 \newcommand{\shabbatvayera}[1]{%date
-	\textbf{Shabbat Vayera \textendash\space #1 Marcheshvan}
+	\textbf{Shabbat Vayera \textemdash\space #1 Mar\d{h}eshvan}
 	
 	\normalshabbosarvit \normalshabbatshacharit
 	
@@ -306,7 +306,21 @@ Davening on Rosh \d{H}odesh is the same as the first day of Rosh \d{H}odesh, exc
 	\normalshabbatmincha
 }
 
-\newcommand{\marcheshvanSunMon}{
+\newcommand{\shabbatchayeisara}[2]{
+\textbf{Shabbat \d{H}ayyei Sara \textemdash\space #1 Mar\d{h}eshvan
+
+\normalshabbosarvit \normalshabbatshacharit
+
+\leinVayera
+
+\haftVayera
+
+#2 \normalshabbatmusaf
+
+\normalshabbatmincha
+}
+
+\newcommand{\marcheshvanSunMon}[2]{
 Arvit for Motzaei Shabbat includes \textit{ya`ale veyavo}.
 
 \textbf{Rosh \d{H}odesh Mar\d{h}eshvan, First day (30 Tishrei)}
@@ -322,4 +336,6 @@ Arvit for Motzaei Shabbat includes \textit{ya`ale veyavo}.
 \shabbatlekhlekha{13}
 
 \shabbatvayera{20}
+
+\shabbatchayeisara{27}{\mevarekhim{Kislev}{#1}{כסלו}{#2} Av HaRa\d{h}amim is omitted.}
 }
