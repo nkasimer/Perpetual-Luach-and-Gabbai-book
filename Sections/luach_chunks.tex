@@ -387,21 +387,33 @@ Arvit for Motzaei Shabbat includes \textit{ya`ale veyavo}.
 
 The \d{H}anukka Menora is lit in the synagogue after sunset prior to `arvit in the southern part of the synagogue, with all three of its blessings, beginning with the far right light.  `Arvit includes \textit{`al hanisim}, which is included in every amida and in \textit{birkat hamazon} throughout \d{H}anukka (if forgotten, do not repeat the amida or bentshing, though it may be inserted in the paragraph \textit{elohai netzor} in the amida or in the \textit{hara\d{h}aman} paragraphs of bentshing).
 
-At home, the \d{H}anukka Menora should be lit after sunset (some wait until dusk), beginning with the far right light, following the recitation of the three blessings on the \d{H}anukka lighting.  It may be lit throughout the night if members of the household are present to see the candles, though it is preferable to light earlier.
+At home, the \d{H}anukka Menora should be lit after sunset (some wait until dusk), beginning with the far right light, following the recitation of the three blessings on the \d{H}anukka lighting.  It may be lit throughout the night if members of the household are present to see the candles, though it is preferable to light earlier. Each night another flame is added to the left of the flames from the previous night, and the newest candle is lit first.
 
-Sha\d{h}arit #1 morning includes \textit{`al hanisim} in the Amidah.  After the leader recites the communal amidah, full Hallel is recited (no ta\d{h}anun).  \halfkad\space is said, since there is no Musaf today.  The Torah is taken out, without \textit{`el `erekh `apayim}.  Three aliyot are read as follows:
+\chanukkaWeekdayMorning{\leinChanukahDayI}
+}
 
-\leinChanukahDayI
+\newcommand{\chanukkaWeekdayMorning}[3]{%day of week, leining, number day of hanukka
+\d{H}anukka candles are lit in shul, without a berahka (#3 candles). Sha\d{h}arit #1 morning includes \textit{`al hanisim} in the Amidah.  After the leader recites the communal amidah, full Hallel is recited (no ta\d{h}anun).  \halfkad\space is said, since there is no Musaf today.  The Torah is taken out, without \textit{`el `erekh `apayim}.  Three aliyot are read as follows:
+
+#2
 
 The \textit{yehi ratzon} paragraphs are not recited.  The Torah is returned as usual, \halfkad , ashrei, no \textit{lamenatzea\d{h}}.  Psalm of the Day for #1 and most communities recite \textit{mizmor shir \d{h}anukkat habayit}.
 }
 
-\newcommand{\chanukkaherevshabbos}{
-Min\d{h}a includes \textit{`al hanisim} (no ta\d{h}anun). \d{H}anukka candles must be lit before Shabbat candles, and have sufficient fuel to burn until dusk.
+\newcommand{\chanukkaWeekdayEvening}[3]{%x day of hanukka, date, number of hanukka
+\textbf{#1 Day of \d{H}anukka\textemdash\space #2}
+
+The \d{H}anukka Menora is lit before `arvit with berakhot (#3 candles), as in previous days. `Arvit includes \textit{`al hanisim}. The \d{H}anukka Menora is lit at home (#3 candles).
+}
+
+\newcommand{\chanukkaherevshabbos}[1]{%number of candles
+Min\d{h}a includes \textit{`al hanisim} (no ta\d{h}anun). \d{H}anukka candles (#1 candles) must be lit before Shabbat candles, and have sufficient fuel to burn until dusk.
 }
 
 \newcommand{\shabChanukka}[5]{%date, parshaname, parshacommand, haftcommand, mevarchim
 \textbf{Shabbat \d{H}anukka Parshat #2 \textemdash\space #1}
+
+Kabbalat Shabbat and `arvit as usual, with \textit{`al hanisim}.
 
 Shabbat Sha\d{h}arit with \textit{`al hanisim}. Full Hallel, \fullkad\space .  Two Sifrei Torah are taken out of the ark, one for the parsha, one for \d{H}anukka Maftir.
 
@@ -412,6 +424,28 @@ After the seven aliyot from the parsha are read, both Sifrei Torah are placed on
 Musaf as usual with \textit{`al hanisim}. Most recite Psalm 30 (\textit{mizmor shir \d{h}anukkat habayit ledavid}) following the Psalm for Shabbat.
 
 Min\d{h}a as usual  with \textit{`al hanisim}.
+}
+
+\newcommand{\hanukamotzash}[3]{%candle quantity, date, x day
+\textbf{#3 Day of \d{H}anukka \textemdash\space #2}
+
+`Arvit for the conclusion of Shabbat. Havdala and \textit{`al hanisim} in the Amidah, \halfkad , \textit{vihi no`am}, etc. The \d{H}anukka Menora is lit (#1 candles), then aleinu and havdala. At home, havdala is recited before the \d{H}anukka candles are lit (#1 candles), which should be done as soon as practicable.
+}
+
+\newcommand{\HanukkaRChWeekdayOneDay}[2]{%dayofweek1, 2
+\textbf{Sixth Day of \d{H}anukka \textemdash Rosh \d{H}odesh Tevet \textemdash\space #1 1 Tevet}
+
+The \d{H}anukka Menora is lit before `arvit with berakhot (five candles), as in previous days. `Arvit includes \textit{ya`ale veyavo} and \textit{`al hanisim}. The \d{H}anukka Menora is lit at home (five candles).
+
+\textbf{#2 Morning}
+
+\d{H}anukka candles are lit in shul, without a berahka (#3 candles). Sha\d{h}arit #1 morning includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah.  After the leader recites the communal amidah, full Hallel is recited.  \fullkad\space is said, since Musaf will be recited.  Two Sifrei Torah are taken out, without \textit{`el `erekh `apayim}.
+
+\leinChanukahDayVI
+
+The first Sefer Torah is lifted and wrapped after the third `aliya. \halfkad is recited after the fourth `aliya. The Sifrei Torah are returned, Ashrei, no \textit{lamenatzea\d{h}}, kedusha desidra. Remove Tefillin before or after \halfkad , according to community custom. Musaf for Rosh \d{H}odesh\iftoggle{leapyear}{ (including \hebword{ולכפרת פשע})}{}, including \textit{`al hanisim}. Shir shel Yom for Rosh \d{H}odesh and #2, and \d{H}anukka.
+
+Min\d{h}a includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah.
 }
 
 \newcommand{\kislevTues}[2]{
@@ -430,8 +464,22 @@ Min\d{h}a as usual  with \textit{`al hanisim}.
 
 \chanukkaOne{Friday}
 
-\chanukkaherevshabbos
+\chanukkaherevshabbos{two}
 
 \shabChanukka{26 Kislev}{Vayeshev}{\leinVayeshevhanukkahII}{\haftHanukkaI}{\mevarekhim{Tevet}{Wednesday}{טבת}{ביום רביעי}}
+
+\hanukamotzash{three}{27 Kislev}{Third}
+
+\chanukkaWeekdayMorning{Sunday}{\leinChanukahDayIII}{three}
+
+\chanukkaWeekdayEvening{Fourth}{28 Kislev}{four}
+
+\chanukkaWeekdayMorning{Monday}{\leinChanukahDayIV}{four}
+
+\chanukkaWeekdayEvening{Fifth}{29 Kislev}{fifth}
+
+\chanukkaWeekdayMorning{Tuesday}{\leinChanukahDayV}{five}
+
+\HanukkaRChWeekdayOneDay{Tuesday}{Wednesday}
 }
 
