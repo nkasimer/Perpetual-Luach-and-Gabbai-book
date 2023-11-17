@@ -267,7 +267,7 @@ Davening on Rosh \d{H}odesh is the same as the first day of Rosh \d{H}odesh, exc
 \newcommand{\shabbatnoach}[1]{%date
 	\textbf{Shabbat Noa\d{h} \textendash\space #1 Mar\d{h}eshvan}
 	
-	\normalshabbosarvit \normalshabbatshacharit
+	\normalshabbosarvit \ 
 	
 	\leinNoach
 	
@@ -389,7 +389,7 @@ The \d{H}anukka Menora is lit in the synagogue after sunset prior to `arvit in t
 
 At home, the \d{H}anukka Menora should be lit after sunset (some wait until dusk), beginning with the far right light, following the recitation of the three blessings on the \d{H}anukka lighting.  It may be lit throughout the night if members of the household are present to see the candles, though it is preferable to light earlier. Each night another flame is added to the left of the flames from the previous night, and the newest candle is lit first.
 
-\chanukkaWeekdayMorning{\leinChanukahDayI}
+\chanukkaWeekdayMorning{#1}{\leinChanukahDayI}{one}
 }
 
 \newcommand{\chanukkaWeekdayMorning}[3]{%day of week, leining, number day of hanukka
@@ -439,13 +439,29 @@ The \d{H}anukka Menora is lit before `arvit with berakhot (five candles), as in 
 
 \textbf{#2 Morning}
 
-\d{H}anukka candles are lit in shul, without a berahka (#3 candles). Sha\d{h}arit #1 morning includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah.  After the leader recites the communal amidah, full Hallel is recited.  \fullkad\space is said, since Musaf will be recited.  Two Sifrei Torah are taken out, without \textit{`el `erekh `apayim}.
+\d{H}anukka candles are lit in shul, without a berahka (six candles). Sha\d{h}arit #1 morning includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah.  After the leader recites the communal amidah, full Hallel is recited.  \fullkad\space is said, since Musaf will be recited.  Two Sifrei Torah are taken out, without \textit{`el `erekh `apayim}.
 
 \leinChanukahDayVI
 
 The first Sefer Torah is lifted and wrapped after the third `aliya. \halfkad is recited after the fourth `aliya. The Sifrei Torah are returned, Ashrei, no \textit{lamenatzea\d{h}}, kedusha desidra. Remove Tefillin before or after \halfkad , according to community custom. Musaf for Rosh \d{H}odesh\iftoggle{leapyear}{ (including \hebword{ולכפרת פשע})}{}, including \textit{`al hanisim}. Shir shel Yom for Rosh \d{H}odesh and #2, and \d{H}anukka.
 
 Min\d{h}a includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah.
+}
+
+\newcommand{\mikkeitzNotChanukka}{
+\textbf{Shabbat Mikkeitz \textemdash\space 4 Tevet}
+
+\normalshabbosarvit
+
+\normalshabbatshacharit
+
+\leinMiketz
+
+\haftMiketz This is a very rare Haftara, as Mikkeitz usually falls during \d{H}anukka.
+
+\normalshabbatmusaf
+
+\normalshabbatmincha
 }
 
 \newcommand{\kislevTues}[2]{
@@ -479,7 +495,52 @@ Min\d{h}a includes \textit{ya`ale veyavo} and \textit{`al hanisim} in the Amidah
 \chanukkaWeekdayEvening{Fifth}{29 Kislev}{fifth}
 
 \chanukkaWeekdayMorning{Tuesday}{\leinChanukahDayV}{five}
-
-\HanukkaRChWeekdayOneDay{Tuesday}{Wednesday}
 }
 
+\newcommand{\shabbatVayigash}[1]{%date
+\textbf{Shabbat Vayigash \textemdash\space #1}
+
+\normalshabbosarvit
+
+\normalshabbatshacharit
+
+\leinVayigash
+
+\normalshabbatmusaf
+
+\normalshabbatmincha
+}
+
+\newcommand{\TenthTevet}[2]{
+\textbf{Fast of the Tenth of Tevet}
+
+The Tenth of Tevet is a minor fast commemorating the beginning of the Siege of Jerusalem by the Babylonians, which ultimately culminated in the destruction of the First Temple.
+
+The leader includes \textit{`aneinu} in their public amidah after \textit{go`el yisrael}, seli\d{h}ot, Avinu Malkeinu, ta\d{h}anun, \halfkad , the Torah is taken out.
+
+\leinminorfast
+
+The Torah is returned and the service is continued as usual on weekdays. Psalm of the day for #1.
+
+Min\d{h}a is said with the same Torah reading as sha\d{h}arit, except that the third aliya is called as Maftir. \haftTzomMincha The Amidah is recited, with \textit{`aneinu} is included by both individuals and the leader (in \textit{shema koleinu} by individuals, after \textit{go`el yisrael} by the leader), the leader says Birkat Kohanim, Sim Shalom. #2
+}
+
+\newcommand{\TenTevetNotFriday}[1]{\TenthTevet{#1}{Avinu Malkeinu is recited, Ta\d{h}anun, \fullkad , aleinu. The fast concludes at dusk.}}
+
+\newcommand{\TenTevetFriday}{\TenthTevet{Friday}{No Ta\d{h}anun, no Avinu Malkeinu. The fast concludes at dusk once kiddush is made.}}
+
+\newcommand{\tevetWens}{
+	\HanukkaRChWeekdayOneDay{Tuesday}{Wednesday}
+	
+	\chanukkaWeekdayEvening{Seventh}{2 Tevet}{eight}
+	
+	\chanukkaWeekdayMorning{Thursday}{\leinChanukahDayVII}{seven}
+	
+	\chanukkaWeekdayEvening{Eighth}{3 Tevet}{eight}
+	
+	\chanukkaWeekdayMorning{Friday}{\leinChanukahDayVIII}{eight}
+
+\TenTevetFriday
+
+\mikkeitzNotChanukka
+}
