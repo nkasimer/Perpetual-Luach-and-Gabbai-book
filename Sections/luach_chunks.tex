@@ -529,6 +529,36 @@ Min\d{h}a is said with the same Torah reading as sha\d{h}arit, except that the t
 
 \newcommand{\TenTevetFriday}{\TenthTevet{Friday}{No Ta\d{h}anun, no Avinu Malkeinu. The fast concludes at dusk once kiddush is made.}}
 
+\newcommand{\shabbatVayechi}[1]{
+	\textbf{Shabbat Vaye\d{h}i \textemdash\space #1 Tevet}
+	
+	\normalshabbosarvit \normalshabbatshacharit
+	
+	\leinVayechi
+	
+	\haftVayechi
+	
+	\normalshabbatmusaf
+	
+	\normalshabbatmincha
+}
+
+\newcommand{\shabbatShemot}[2]{
+	\textbf{Shabbat Shemot \textemdash\space #1 Tevet}
+	
+	\normalshabbosarvit \normalshabbatshacharit
+	
+	\leinShemot
+	
+	\haftShemot
+	
+	#2
+	
+	\normalshabbatmusaf
+	
+	\normalshabbatmincha
+}
+
 \newcommand{\tevetWens}{
 	\HanukkaRChWeekdayOneDay{Tuesday}{Wednesday}
 	
@@ -540,7 +570,13 @@ Min\d{h}a is said with the same Torah reading as sha\d{h}arit, except that the t
 	
 	\chanukkaWeekdayMorning{Friday}{\leinChanukahDayVIII}{eight}
 
+\mikkeitzNotChanukka
+
 \TenTevetFriday
 
-\mikkeitzNotChanukka
+\shabbatVayigash{11}
+
+\shabbatVayechi{18}
+
+\shabbatShemot{25}{\mevarekhim{Shevat}{Thursday}{שבט}{חמישי}. Av HaRa\d{h}amim is omitted.}
 }
