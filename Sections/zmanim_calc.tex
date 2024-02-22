@@ -8,7 +8,7 @@ Calculating zmanim is primarily an exercise in trigonometry. Given the rotation 
 	z = \arcsin\left({\tan{D}\tan{L} + \frac{sin{A}}{\cos{D}\cos{L}}}\right)
 \end{displaymath}
 
-Where \textit{z} is the time before or after sunrise or sunset, \textit{D} is the sun's declination\footnote{This is how many degrees north or south of the equator would see the sun directly overhead at solar noon}, \textit{L} is the latitude, and \textit{A} is the depression angle of the sun, i.e. the angle of the sun below the horizon (a positive number here is for angle below the horizon). This angle must be converted to number of minutes (by multiplying by 4) and either added to or subtracted from 6pm for evening zmanim or 6am for morning zmanim (negative \textit{z} is a morning zman after 6am or an evening zman before 6pm). This time is then converted from "sundial time" (solar time)\footnote{Sundials are unable to measure times after sunset or before sunrise, but the time system here is the same as that measured by a sundial, where 6am is when the sun is due east, noon when it is due north or south and at its highest point in the sky, and 6pm when it is due west. This also explains how an angle can be converted to a number of minutes. From the perspective of an observer on earth, the sun does a $360^{\circ}$ circle clockwise in the northern hemisphere and counterclockwise in the southern hemisphere (that's where the term ``clockwise'' comes from), which works out to moving $15^{\circ}$ per hour. This rotation is what a sundial measures.} by adding or subtracting minutes to account for the equation of time for the given date. This is the zman expressed in local time, where 12:00 noon is the average solar noon. This can then be converted to standard time by adding or subtracting time to account for the standard time zone in use.
+Where \textit{z} is the time before or after sunrise or sunset, \textit{D} is the sun's declination\footnote{This is how many degrees north or south of the equator would see the sun directly overhead at solar noon}, \textit{L} is the latitude, and \textit{A} is the depression angle of the sun, i.e. the angle of the sun below the horizon (a positive number here is for angle below the horizon). This angle must be converted to number of minutes (by multiplying by 4) and either added to or subtracted from 6pm for evening zmanim or 6am for morning zmanim (negative \textit{z} is a morning zman after 6am or an evening zman before 6pm). This time is then converted from ``sundial time" (solar time)\footnote{Sundials are unable to measure times after sunset or before sunrise, but the time system here is the same as that measured by a sundial, where 6am is when the sun is due east, noon when it is due north or south and at its highest point in the sky, and 6pm when it is due west. This also explains how an angle can be converted to a number of minutes. From the perspective of an observer on earth, the sun does a $360^{\circ}$ circle clockwise in the northern hemisphere and counterclockwise in the southern hemisphere (that's where the term “clockwise” comes from), which works out to moving $15^{\circ}$ per hour. This rotation is what a sundial measures.} by adding or subtracting minutes to account for the equation of time for the given date. This is the zman expressed in local time, where 12:00 noon is the average solar noon. This can then be converted to standard time by adding or subtracting time to account for the standard time zone in use.
 
 This process is quite tedious to do manually, which is why people usually use tables or computer programs.  Computer programs rely on access to a computer, and many of them rely on internet access, and unless preparations are made, cannot show zmanim on Shabbos.  Most tables list the zmanim for a particular location for a full year.  This makes the zmanim tables either very lengthy, cover a limited number of locations, or both.  These tables take a different approach, with tables for useful depression angles, each showing the number of minutes to add/subtract from 6am/pm for a range of latitudes and solar declinations.
 
@@ -25,23 +25,31 @@ Instructions for use of the zman calculation tables are as follows:
 	\item Determine the sign of the 0° offset. For zmanim in summer (equinox to equinox), the sign is positive. In the winter it is negative.
 	\item Determine the number of degrees to use for the desired zman. Explanations of the various times, and angle adjustments for more accurate calculations for large depression angles, are in a table below. If using the multiplication table, the angle adjustment is already factored in.
 	\item Multiply the number of degrees (from the adjustment table if desired) by the minutes-per-degree value. This number of minutes is always positive. This task can be simplified for depression angles listed by using the multiplication table, which incorporates the depression angle adjustments. Add this value to the 0° offset (using a negative 0° offset in winter, as noted above)
-	\item Use the minute correction table to adjust the result.  This is only necessary for large results.  As shown on the table, no adjustment is needed for results of 53 minutes or less, and only above 90 minutes is the adjustment more than 2 minutes.
+	\item Use the minute correction table to adjust the result. As shown on the table, no adjustment is needed for results of 53 minutes or less, and only above 90 minutes is the adjustment more than 2 minutes.  Note that the sign of the minutes to add should match the input, so a negative number of minutes would become a slightly larger number of negative minutes after adjustment.
 	\item For zmanim in the morning (dawn, misheyakir) the minutes is a time earlier than 6am (or later, if negative). For zmanim in the evening, the minutes is number of minutes before 6pm (or before, if negative). This is the time of the zman in solar time
-	\item If you are calculating a zman that is not directly based on a depression angle (such as 7 minutes after 7°5', or 3 proportional hours after a particular dawn zman for sof zman kriyas shema shel shacharis according to the Magen Avraham), calculate it now.  For zmanim dependent on proportional hours, use the fact that chatzos is 12 noon in solar time\footnote{At least, in mainstream opinions. There are opinions that believe proportional hours are indexed to dawn and sunset, or dawn and dusk (using a definition that isn't ``symmetric'' with dawn), in which case chatzos is not solar noon. These definitions are difficult to square with the definition of chatzos assumed in halakhic texts.}.
+	\item If you are calculating a zman that is not directly based on a depression angle (such as 20 minutes before sunset for candle lighting, or 7 minutes after 7°5' for havdala, or 3 proportional hours after a particular dawn zman for latest morning shema according to the Magen Avraham), calculate it now.  For zmanim dependent on proportional hours, use the fact that chatzos is 12 noon in solar time\footnote{At least, in mainstream opinions. There are opinions that believe proportional hours are indexed to dawn and sunset, or dawn and dusk (using a definition that isn't “symmetric” with dawn), in which case chatzos is not solar noon. These definitions are difficult to square with the definition of chatzos assumed in halakhic texts.}
 	\item Add or subtract the number of minutes from the equation of time table for the given date
 	\item Add or subtract time to account for standard time (including daylight saving time). This is a constant number of minutes for a given location (though you may need to add an hour for DST). This can be calculated with the formula $mins = 4 * \left(\left(UTCoffset * 15\right) - Latitude\right)$.  For convenience, a table of timezones is below.
 \end{enumerate}
 
 I suggest highlighting the line(s) for latitudes you often calculate zmanim for. The arithmetic of multiplying degrees times degrees per minute can be made much simpler by using the fact that a second is $\frac{1}{60}$ of a minute, and an arcminute is $\frac{1}{60}$ of a degree.
 
-The zmanim calculated here do not have the precision of a computer program. Declination values vary from year to year, as does the equation of time (which is why both figures are rounded in the tables here). The 0° offset figures and equation of time are only given to the minute. If these numbers are obtained from an almanac more precisely, the result will in turn be more precise (though a tangent table will be necessary to calculate the 0° offset to the second). The precision of the overall zman, though, will be limited to whatever input (latitude, longitude, declination, equation of time) is least precise.
+The zmanim calculated here do not have the precision of a computer program. Declination values vary from year to year, as does the equation of time (which is why both figures are rounded in the tables here). The 0° offset figures and equation of time are only given to the minute. If these numbers are obtained from an almanac more precisely, the result will in turn be more precise. The precision of the overall zman, though, will be limited to whatever input (latitude, longitude, declination, equation of time) is least precise.
+
+\section{Observations}
+
+When looking at the table, it should be noted that the 0° offsets vary throughout the year much more than the minutes-per-degree number does. This is why approximating a zman with a fixed number of minutes before sunrise or after sunset works reasonably well. To calculate that number of minutes, subtract the depression angle for sunrise or sunset (50') from the desired depression angle, and multiply the result by either the largest or smallest minutes-per-degree figure (generally, whichever results in the most stringency).
+
+The same process can also be used to calculate minutes from sunrise or sunset for a specific date, using published sunrise or sunset times from a newspaper. While this requires manually multiplying the degrees times the minutes-per-degree instead of using the multiplication table, it skips the step of determining the 0° offset, using the equation of time, or correcting for time zone.\vfill
 
 \section{Equation of Time and Declination Table}
 
+These are the value of the equation of time and solar declination for dates throughout the year. These values vary from year to year according to the gregorian leap year cycle (and declination can change noticeably from morning to night around the equinoxes, or from one time zone to another, if they are distant). If to-the-minute accuracy is desired, these values can be determined from an almanac.
+
 \begin{footnotesize}
-	\begin{minipage}{0.5\textwidth}
-\begin{tabular}{c | c | c }
-	Date&Equation of Time&Declination\\\hline
+	\begin{minipage}{0.33\textwidth}
+\begin{tabular}[t]{c | c | c }
+	Date&Eqn of Time&Declination\\\hline
 Jan-01 & 3 & -23°\\\hline
 Jan-04 & 4 & -23°\\\hline
 Jan-07 & 6 & -22°\\\hline
@@ -82,6 +90,10 @@ Apr-19 & -1 & 11°\\\hline
 Apr-22 & -1 & 12°\\\hline
 Apr-25 & -2 & 13°\\\hline
 Apr-28 & -3 & 14°\\\hline
+\end{tabular}\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\begin{tabular}[t]{c | c | c}
+Date&Eqn of Time&Declination\\\hline
 May-01 & -3 & 15°\\\hline
 May-04 & -3 & 16°\\\hline
 May-07 & -4 & 17°\\\hline
@@ -103,10 +115,6 @@ Jun-21 & 1 & 23°\\\hline
 Jun-24 & 2 & 23°\\\hline
 Jun-27 & 3 & 23°\\\hline
 Jun-30 & 3 & 23°\\\hline
-\end{tabular}\end{minipage}
-\begin{minipage}{0.5\textwidth}
-	\begin{tabular}{c | c | c}
-		Date&Equation of Time&Declination\\\hline
 Jul-03 & 4 & 23°\\\hline
 Jul-06 & 4 & 23°\\\hline
 Jul-09 & 5 & 22°\\\hline
@@ -127,6 +135,10 @@ Aug-20 & 4 & 12°\\\hline
 Aug-23 & 3 & 11°\\\hline
 Aug-26 & 2 & 10°\\\hline
 Aug-29 & 1 & 9°\\\hline
+\end{tabular}\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\begin{tabular}[t]{c | c | c}
+Date&Eqn of Time&Declination\\\hline
 Sep-01 & 0 & 8°\\\hline
 Sep-04 & -1 & 7°\\\hline
 Sep-07 & -2 & 5°\\\hline
@@ -247,7 +259,7 @@ Dec-30 & 2 & -23°\\\hline
 \end{longtable}\end{scriptsize}\end{landscape}\newpage
 \section{Depression Angles \& Adjustments}
 
-The following is a table of depression angles used in halakha.  An explanation of each degree number is as follows \parencite{dvaryom}. Note that very early "Gra" times are not listed, as they are not in wide use and since the stars are never visible that early. For smaller depression angles, using the angle times the minutes per degree figure in the following table is adequate. As angles get larger (and the minutes per degree is higher) this figure begins to become inaccurate. For increased accuracy at higher depression angles, multiply the minutes-per-degree figure by the ''mult by`` figure below. Arithmetically it will often be easier to use the original value and then subtracting the result of the minutes-per-degree figure times the difference between original angle and the modified angle.
+The following is a table of depression angles used in halakha.  An explanation of each degree number is as follows \parencite{dvaryom}. Note that very early “Gra” times are not listed, as they are not in wide use and since the stars are never visible that early. For smaller depression angles, using the angle times the minutes per degree figure in the following table is adequate. As angles get larger (and the minutes per degree is higher) this figure begins to become inaccurate. For increased accuracy at higher depression angles, multiply the minutes-per-degree figure by the “mult by” figure below. Arithmetically it will often be easier to use the original value and then subtracting the result of the minutes-per-degree figure times the difference between original angle and the modified angle.
 
 \begin{tabular}{c | c | p{0.75\textwidth}}
 	Angle&Mult by:&Explanation\\\hline
@@ -264,77 +276,77 @@ The following is a table of depression angles used in halakha.  An explanation o
 	14°&13°52'&A time some use for dawn (Montreal Luach)\\\hline
 	16°6'&15°53'&A widely used time for dawn. It also is sometimes used for nightfall. It corresponds to the depression angle 72 minutes after sunset at the equinoxes at approximately the latitude of Israel and Babylonia\\\hline
 	18°&17°42'&A time some use for dawn (MTJ Luach). It matches astronomical twilight. Times later than this are difficult to understand, as astronomers report that even dim stars are visible at this point.\\\hline
-	19°40'&19°22'&An earlier opinion for dawn and a later opinion for nightfall, corresponding to the depression angle 72 minutes after sunset at the equinoxes at approximately the latitude of Israel and Babylonia. Some keep Shabbat until this time, which is called the ``ochtal'' in Yiddish (since 90 minutes is an eighth of 12 hours).\\\hline
-	26°&25°7'&A late nightfall time, equivalent to the depression angle 120 minutes after sunset at the equinoxes in Israel and Babylonia. This is the time called the ``zekstal'' (one sixth of 12 hours)\\\hline
+	19°40'&19°22'&An earlier opinion for dawn and a later opinion for nightfall, corresponding to the depression angle 72 minutes after sunset at the equinoxes at approximately the latitude of Israel and Babylonia. Some keep Shabbat until this time, which is called the “ochtal” in Yiddish (since 90 minutes is an eighth of 12 hours). In practice, because of the impracticability of such a late time in the summer, most who keep this zman simply use a fixed 90 minutes after sunset.\\\hline
+	26°&25°7'&A late nightfall time, equivalent to the depression angle 120 minutes after sunset at the equinoxes in Israel and Babylonia. This is the time called the “zekstal” (one sixth of 12 hours). In practice, because of the impracticability of such a late time in the summer, most who keep this zman simply use a fixed 120 minutes after sunset.\\\hline
 \end{tabular}
-
+\newpage
 \section{Multiplication Table}
 
-This table allows faster calculation of minutes from a given depression angle and minutes per degree figure. Useful depression angles are on the top row. Each row is simply the number in the first column times the angle (adjusted for more precision to account for $sin{x}$ not being a perfect approximation of $x$). To use this table, look up your desired depression angle times the number of minutes per degree. The result is in minutes and seconds.  Then look up your desired depression angle times the number of seconds per degree (assuming your minutes per degree figure is not a whole number of minutes).  The result is in seconds (and sixtieths of a second, which can be ignored).  Add the numbers, add the previously obtained 0° offset minutes, and continue with the calculation as described above.
+This table allows faster calculation of minutes from a given depression angle and minutes per degree figure. Useful depression angles are on the top row. Each row is simply the number in the first column times the angle (adjusted for more precision to account for $sin{x}$ not being a perfect approximation of $x$). To use this table, look up your desired depression angle times the number of minutes per degree. Then look up your desired depression angle times the number of seconds per degree. Then add the results. This table is in base 60. Depending on the inputs, the result may be in hours and minutes, minutes and seconds, or seconds and sixtieths of a second. 
 
-\begin{footnotesize}\begin{tabular}{c | c | c | c | c | c | c | c | c | c | c | c | c | c | c}
+\begin{scriptsize}\begin{tabular}{c | c | c | c | c | c | c | c | c | c | c | c | c | c | c}
 		\space&0°50'&6°&6°30'&7°5'&8°30'&10°12'&11°&11°30'&12°&14°&16°6'&18°&19°45'&26°\\\hline
 		1&0:50&5:59&6:29&7:04&8:28&10:09&10:56&11:25&11:55&13:52&15:53&17:42&19:22&25:07\\\hline
 		2&1:40&11:59&12:58&14:08&16:56&20:18&21:52&22:51&23:49&27:43&31:47&35:25&38:43&50:14\\\hline
-		3&2:30&17:58&19:27&21:12&25:24&30:26&32:48&34:16&35:44&41:35&47:40&53:07&58:05&75:21\\\hline
-		4&3:20&23:57&25:57&28:16&33:53&40:35&43:44&45:42&47:39&55:27&63:33&70:49&77:27&100:28\\\hline
-		5&4:10&29:57&32:26&35:19&42:21&50:44&54:40&57:07&59:34&69:18&79:27&88:32&96:48&125:35\\\hline
-		6&5:00&35:56&38:55&42:23&50:49&60:53&65:36&68:32&71:28&83:10&95:20&106:14&116:10&150:42\\\hline
-		7&5:50&41:55&45:24&49:27&59:17&71:01&76:32&79:58&83:23&97:02&111:13&123:56&135:32&175:49\\\hline
-		8&6:40&47:55&51:53&56:31&67:45&81:10&87:28&91:23&95:18&110:53&127:07&141:39&154:53&200:56\\\hline
-		9&7:30&53:54&58:22&63:35&76:13&91:19&98:24&102:48&107:13&124:45&143:00&159:21&174:15&226:03\\\hline
-		10&8:20&59:53&64:52&70:39&84:41&101:28&109:20&114:14&119:07&138:37&158:53&177:03&193:37&251:10\\\hline
-		11&9:10&65:53&71:21&77:43&93:09&111:36&120:15&125:39&131:02&152:28&174:47&194:46&212:58&276:17\\\hline
-		12&10:00&71:52&77:50&84:47&101:38&121:45&131:11&137:05&142:57&166:20&190:40&212:28&232:20&301:24\\\hline
-		13&10:50&77:51&84:19&91:51&110:06&131:54&142:07&148:30&154:52&180:12&206:33&230:10&251:42&326:31\\\hline
-		14&11:40&83:51&90:48&98:55&118:34&142:03&153:03&159:55&166:46&194:03&222:27&247:53&271:03&351:38\\\hline
-		15&12:30&89:50&97:17&105:58&127:02&152:12&163:59&171:21&178:41&207:55&238:20&265:35&290:25&376\\\hline
-		16&13:20&95:49&103:47&113:02&135:30&162:20&174:55&182:46&190:36&221:47&254:13&283:17&309:47&401\\\hline
-		17&14:10&101:49&110:16&120:06&143:58&172:29&185:51&194:11&202:31&235:38&270:07&300:59&329:08&426\\\hline
-		18&15:00&107:48&116:45&127:10&152:26&182:38&196:47&205:37&214:25&249:30&286:00&318:42&348:30&452\\\hline
-		19&15:50&113:48&123:14&134:14&160:54&192:47&207:43&217:02&226:20&263:22&301:53&336:24&367&477\\\hline
-		20&16:40&119:47&129:43&141:18&169:23&202:55&218:39&228:28&238:15&277:13&317:47&354:06&387&502\\\hline
-		21&17:30&125:46&136:12&148:22&177:51&213:04&229:35&239:53&250:10&291:05&333:40&371&406&527\\\hline
-		22&18:20&131:46&142:42&155:26&186:19&223:13&240:31&251:18&262:04&304:57&349:33&389&425&552\\\hline
-		23&19:09&137:45&149:11&162:30&194:47&233:22&251:27&262:44&273:59&318:48&365&407&445&577\\\hline
-		24&19:59&143:44&155:40&169:34&203:15&243:31&262:23&274:09&285:54&332:40&381&424&464&602\\\hline
-		25&20:49&149:44&162:09&176:37&211:43&253:39&273:19&285:34&297:49&346:32&397&442&484&627\\\hline
-		26&21:39&155:43&168:38&183:41&220:11&263:48&284:15&297:00&309:43&360&413&460&503&653\\\hline
-		27&22:29&161:42&175:07&190:45&228:40&273:57&295:11&308:25&321:38&374&429&478&522&678\\\hline
-		28&23:19&167:42&181:37&197:49&237:08&284:06&306:07&319:51&333:33&388&444&495&542&703\\\hline
-		29&24:09&173:41&188:06&204:53&245:36&294:14&317:03&331:16&345:28&401&460&513&561&728\\\hline
-		30&24:59&179:40&194:35&211:57&254:04&304:23&327:59&342:41&357:22&415&476&531&580&753\\\hline
-		31&25:49&185:40&201:04&219:01&262:32&314:32&338:55&354:07&369&429&492&548&600&778\\\hline
-		32&26:39&191:39&207:33&226:05&271:00&324:41&349:50&365&381&443&508&566&619&803\\\hline
-		33&27:29&197:38&214:02&233:09&279:28&334:49&360&376&393&457&524&584&638&828\\\hline
-		34&28:19&203:38&220:32&240:13&287:56&344:58&371&388&405&471&540&601&658&853\\\hline
-		35&29:09&209:37&227:01&247:16&296:25&355:07&382&399&416&485&556&619&677&879\\\hline
-		36&29:59&215:36&233:30&254:20&304:53&365&393&411&428&499&572&637&697&904\\\hline
-		37&30:49&221:36&239:59&261:24&313:21&375&404&422&440&512&587&655&716&929\\\hline
-		38&31:39&227:35&246:28&268:28&321:49&385&415&434&452&526&603&672&735&954\\\hline
-		39&32:29&233:34&252:57&275:32&330:17&395&426&445&464&540&619&690&755&979\\\hline
-		40&33:19&239:34&259:27&282:36&338:45&405&437&456&476&554&635&708&774&1004\\\hline
-		41&34:09&245:33&265:56&289:40&347:13&416&448&468&488&568&651&725&793&1029\\\hline
-		42&34:59&251:32&272:25&296:44&355:42&426&459&479&500&582&667&743&813&1054\\\hline
-		43&35:49&257:32&278:54&303:48&364&436&470&491&512&596&683&761&832&1080\\\hline
-		44&36:39&263:31&285:23&310:52&372&446&481&502&524&609&699&779&851&1105\\\hline
-		45&37:29&269:30&291:52&317:55&381&456&491&514&536&623&715&796&871&1130\\\hline
-		46&38:19&275:30&298:22&324:59&389&466&502&525&547&637&730&814&890&1155\\\hline
-		47&39:09&281:29&304:51&332:03&398&476&513&536&559&651&746&832&909&1180\\\hline
-		48&39:59&287:28&311:20&339:07&406&487&524&548&571&665&762&849&929&1205\\\hline
-		49&40:49&293:28&317:49&346:11&414&497&535&559&583&679&778&867&948&1230\\\hline
-		50&41:39&299:27&324:18&353:15&423&507&546&571&595&693&794&885&968&1255\\\hline
-		51&42:29&305:26&330:47&360&431&517&557&582&607&706&810&902&987&1280\\\hline
-		52&43:19&311:26&337:17&367&440&527&568&594&619&720&826&920&1006&1306\\\hline
-		53&44:09&317:25&343:46&374&448&537&579&605&631&734&842&938&1026&1331\\\hline
-		54&44:59&323:24&350:15&381&457&547&590&616&643&748&858&956&1045&1356\\\hline
-		55&45:49&329:24&356:44&388&465&558&601&628&655&762&873&973&1064&1381\\\hline
-		56&46:39&335:23&363&395&474&568&612&639&667&776&889&991&1084&1406\\\hline
-		57&47:29&341:23&369&402&482&578&623&651&679&790&905&1009&1103&1431\\\hline
-		58&48:19&347:22&376&409&491&588&634&662&690&803&921&1026&1122&1456\\\hline
-		59&49:09&353:21&382&416&499&598&645&673&702&817&937&1044&1142&1481\\\hline
-		60&49:59&359:21&389&423&508&608&655&685&714&831&953&1062&1161&1507\\
-\end{tabular}\end{footnotesize}
+		3&2:30&17:58&19:27&21:12&25:24&30:26&32:48&34:16&35:44&41:35&47:40&53:07&58:05&1:15\\\hline
+		4&3:20&23:57&25:57&28:16&33:53&40:35&43:44&45:42&47:39&55:27&1:03&1:10&1:17&1:40\\\hline
+		5&4:10&29:57&32:26&35:19&42:21&50:44&54:40&57:07&59:34&1:09&1:19&1:28&1:36&2:05\\\hline
+		6&5:00&35:56&38:55&42:23&50:49&1:00&1:05&1:08&1:11&1:23&1:35&1:46&1:56&2:30\\\hline
+		7&5:50&41:55&45:24&49:27&59:17&1:11&1:16&1:19&1:23&1:37&1:51&2:03&2:15&2:55\\\hline
+		8&6:40&47:55&51:53&56:31&1:07&1:21&1:27&1:31&1:35&1:50&2:07&2:21&2:34&3:20\\\hline
+		9&7:30&53:54&58:22&1:03&1:16&1:31&1:38&1:42&1:47&2:04&2:23&2:39&2:54&3:46\\\hline
+		10&8:20&59:53&1:04&1:10&1:24&1:41&1:49&1:54&1:59&2:18&2:38&2:57&3:13&4:11\\\hline
+		11&9:10&1:05&1:11&1:17&1:33&1:51&2:00&2:05&2:11&2:32&2:54&3:14&3:32&4:36\\\hline
+		12&10:00&1:11&1:17&1:24&1:41&2:01&2:11&2:17&2:22&2:46&3:10&3:32&3:52&5:01\\\hline
+		13&10:50&1:17&1:24&1:31&1:50&2:11&2:22&2:28&2:34&3:00&3:26&3:50&4:11&5:26\\\hline
+		14&11:40&1:23&1:30&1:38&1:58&2:22&2:33&2:39&2:46&3:14&3:42&4:07&4:31&5:51\\\hline
+		15&12:30&1:29&1:37&1:45&2:07&2:32&2:43&2:51&2:58&3:27&3:58&4:25&4:50&6:16\\\hline
+		16&13:20&1:35&1:43&1:53&2:15&2:42&2:54&3:02&3:10&3:41&4:14&4:43&5:09&6:41\\\hline
+		17&14:10&1:41&1:50&2:00&2:23&2:52&3:05&3:14&3:22&3:55&4:30&5:00&5:29&7:06\\\hline
+		18&15:00&1:47&1:56&2:07&2:32&3:02&3:16&3:25&3:34&4:09&4:46&5:18&5:48&7:32\\\hline
+		19&15:50&1:53&2:03&2:14&2:40&3:12&3:27&3:37&3:46&4:23&5:01&5:36&6:07&7:57\\\hline
+		20&16:40&1:59&2:09&2:21&2:49&3:22&3:38&3:48&3:58&4:37&5:17&5:54&6:27&8:22\\\hline
+		21&17:30&2:05&2:16&2:28&2:57&3:33&3:49&3:59&4:10&4:51&5:33&6:11&6:46&8:47\\\hline
+		22&18:20&2:11&2:22&2:35&3:06&3:43&4:00&4:11&4:22&5:04&5:49&6:29&7:05&9:12\\\hline
+		23&19:09&2:17&2:29&2:42&3:14&3:53&4:11&4:22&4:33&5:18&6:05&6:47&7:25&9:37\\\hline
+		24&19:59&2:23&2:35&2:49&3:23&4:03&4:22&4:34&4:45&5:32&6:21&7:04&7:44&10:02\\\hline
+		25&20:49&2:29&2:42&2:56&3:31&4:13&4:33&4:45&4:57&5:46&6:37&7:22&8:04&10:27\\\hline
+		26&21:39&2:35&2:48&3:03&3:40&4:23&4:44&4:57&5:09&6:00&6:53&7:40&8:23&10:53\\\hline
+		27&22:29&2:41&2:55&3:10&3:48&4:33&4:55&5:08&5:21&6:14&7:09&7:58&8:42&11:18\\\hline
+		28&23:19&2:47&3:01&3:17&3:57&4:44&5:06&5:19&5:33&6:28&7:24&8:15&9:02&11:43\\\hline
+		29&24:09&2:53&3:08&3:24&4:05&4:54&5:17&5:31&5:45&6:41&7:40&8:33&9:21&12:08\\\hline
+		30&24:59&2:59&3:14&3:31&4:14&5:04&5:27&5:42&5:57&6:55&7:56&8:51&9:40&12:33\\\hline
+		31&25:49&3:05&3:21&3:39&4:22&5:14&5:38&5:54&6:09&7:09&8:12&9:08&10:00&12:58\\\hline
+		32&26:39&3:11&3:27&3:46&4:31&5:24&5:49&6:05&6:21&7:23&8:28&9:26&10:19&13:23\\\hline
+		33&27:29&3:17&3:34&3:53&4:39&5:34&6:00&6:16&6:33&7:37&8:44&9:44&10:38&13:48\\\hline
+		34&28:19&3:23&3:40&4:00&4:47&5:44&6:11&6:28&6:45&7:51&9:00&10:01&10:58&14:13\\\hline
+		35&29:09&3:29&3:47&4:07&4:56&5:55&6:22&6:39&6:56&8:05&9:16&10:19&11:17&14:39\\\hline
+		36&29:59&3:35&3:53&4:14&5:04&6:05&6:33&6:51&7:08&8:19&9:32&10:37&11:37&15:04\\\hline
+		37&30:49&3:41&3:59&4:21&5:13&6:15&6:44&7:02&7:20&8:32&9:47&10:55&11:56&15:29\\\hline
+		38&31:39&3:47&4:06&4:28&5:21&6:25&6:55&7:14&7:32&8:46&10:03&11:12&12:15&15:54\\\hline
+		39&32:29&3:53&4:12&4:35&5:30&6:35&7:06&7:25&7:44&9:00&10:19&11:30&12:35&16:19\\\hline
+		40&33:19&3:59&4:19&4:42&5:38&6:45&7:17&7:36&7:56&9:14&10:35&11:48&12:54&16:44\\\hline
+		41&34:09&4:05&4:25&4:49&5:47&6:56&7:28&7:48&8:08&9:28&10:51&12:05&13:13&17:09\\\hline
+		42&34:59&4:11&4:32&4:56&5:55&7:06&7:39&7:59&8:20&9:42&11:07&12:23&13:33&17:34\\\hline
+		43&35:49&4:17&4:38&5:03&6:04&7:16&7:50&8:11&8:32&9:56&11:23&12:41&13:52&18:00\\\hline
+		44&36:39&4:23&4:45&5:10&6:12&7:26&8:01&8:22&8:44&10:09&11:39&12:59&14:11&18:25\\\hline
+		45&37:29&4:29&4:51&5:17&6:21&7:36&8:11&8:34&8:56&10:23&11:55&13:16&14:31&18:50\\\hline
+		46&38:19&4:35&4:58&5:24&6:29&7:46&8:22&8:45&9:07&10:37&12:10&13:34&14:50&19:15\\\hline
+		47&39:09&4:41&5:04&5:32&6:38&7:56&8:33&8:56&9:19&10:51&12:26&13:52&15:09&19:40\\\hline
+		48&39:59&4:47&5:11&5:39&6:46&8:07&8:44&9:08&9:31&11:05&12:42&14:09&15:29&20:05\\\hline
+		49&40:49&4:53&5:17&5:46&6:54&8:17&8:55&9:19&9:43&11:19&12:58&14:27&15:48&20:30\\\hline
+		50&41:39&4:59&5:24&5:53&7:03&8:27&9:06&9:31&9:55&11:33&13:14&14:45&16:08&20:55\\\hline
+		51&42:29&5:05&5:30&6:00&7:11&8:37&9:17&9:42&10:07&11:46&13:30&15:02&16:27&21:20\\\hline
+		52&43:19&5:11&5:37&6:07&7:20&8:47&9:28&9:54&10:19&12:00&13:46&15:20&16:46&21:46\\\hline
+		53&44:09&5:17&5:43&6:14&7:28&8:57&9:39&10:05&10:31&12:14&14:02&15:38&17:06&22:11\\\hline
+		54&44:59&5:23&5:50&6:21&7:37&9:07&9:50&10:16&10:43&12:28&14:18&15:56&17:25&22:36\\\hline
+		55&45:49&5:29&5:56&6:28&7:45&9:18&10:01&10:28&10:55&12:42&14:33&16:13&17:44&23:01\\\hline
+		56&46:39&5:35&6:03&6:35&7:54&9:28&10:12&10:39&11:07&12:56&14:49&16:31&18:04&23:26\\\hline
+		57&47:29&5:41&6:09&6:42&8:02&9:38&10:23&10:51&11:19&13:10&15:05&16:49&18:23&23:51\\\hline
+		58&48:19&5:47&6:16&6:49&8:11&9:48&10:34&11:02&11:30&13:23&15:21&17:06&18:42&24:16\\\hline
+		59&49:09&5:53&6:22&6:56&8:19&9:58&10:45&11:13&11:42&13:37&15:37&17:24&19:02&24:41\\\hline
+		60&49:59&5:59&6:29&7:03&8:28&10:08&10:55&11:25&11:54&13:51&15:53&17:42&19:21&25:07\\\hline
+\end{tabular}\end{scriptsize}
 
 \section{Minute Correction Table}
 
@@ -342,90 +354,90 @@ This is a table to account for the fact that $\arcsin x \approx x$ (when both as
 
 	\begin{minipage}{0.5\textwidth}
 \begin{tabular}[t]{c|c}
-	For mins in range & Add this many minutes \\\hline
-	1 - 53 & 0 \\\hline
-	54 - 76 & 1 \\\hline
-	77 - 90 & 2 \\\hline
-	91 - 100 & 3 \\\hline
-	101 - 108 & 4 \\\hline
-	109 - 115 & 5 \\\hline
-	116 - 121 & 6 \\\hline
-	122 - 126 & 7 \\\hline
-	127 - 131 & 8 \\\hline
-	132 - 135 & 9 \\\hline
-	136 - 139 & 10 \\\hline
-	140 - 143 & 11 \\\hline
-	144 - 146 & 12 \\\hline
-	147 - 149 & 13 \\\hline
-	150 - 152 & 14 \\\hline
-	153 - 155 & 15 \\\hline
-	156 - 158 & 16 \\\hline
-	159 - 160 & 17 \\\hline
-	161 - 163 & 18 \\\hline
-	164 - 165 & 19 \\\hline
-	166 - 167 & 20 \\\hline
-	168 - 169 & 21 \\\hline
-	170 - 171 & 22 \\\hline
-	172 - 173 & 23 \\\hline
-	174 - 175 & 24 \\\hline
-	176 - 177 & 25 \\\hline
-	178 - 179 & 26 \\\hline
-	180  & 27 \\\hline
-		181 - 182 & 28 \\\hline
-	183 & 29 \\\hline
-	184 - 185 & 30 \\\hline
-	186 & 31 \\\hline
-	187 - 188 & 32 \\\hline
-	189 & 33 \\\hline
-	190 & 34 \\\hline
-	191 & 35 \\\hline
-	192 - 193 & 36 \\\hline
+	For time in range & Add: \\\hline
+	1 - 53 & 0:00 \\\hline
+	54 - 1:16 & 0:01 \\\hline
+	1:17 - 1:30 & 0:02 \\\hline
+	1:31 - 1:40 & 0:03 \\\hline
+	1:41 - 1:48 & 0:04 \\\hline
+	1:49 - 1:55 & 0:05 \\\hline
+	1:56 - 2:01 & 0:06 \\\hline
+	2:02 - 2:06 & 0:07 \\\hline
+	2:07 - 2:11 & 0:08 \\\hline
+	2:12 - 2:15 & 0:09 \\\hline
+	2:16 - 2:19 & 0:10 \\\hline
+	2:20 - 2:23 & 0:11 \\\hline
+	2:24 - 2:26 & 0:12 \\\hline
+	2:27 - 2:28 & 0:13 \\\hline
+	2:30 - 2:32 & 0:14 \\\hline
+	2:33 - 2:35 & 0:15 \\\hline
+	2:36 - 2:38 & 0:16 \\\hline
+	2:39 - 2:40 & 0:17 \\\hline
+	2:41 - 2:43 & 0:18 \\\hline
+	2:44 - 2:45 & 0:19 \\\hline
+	2:46 - 2:47 & 0:20 \\\hline
+	2:48 - 2:49 & 0:21 \\\hline
+	2:50 - 2:51 & 0:22 \\\hline
+	2:52 - 2:53 & 0:23 \\\hline
+	2:54 - 2:55 & 0:24 \\\hline
+	2:57 - 2:57 & 0:25 \\\hline
+	2:58 - 2:59 & 0:26 \\\hline
+	3:00  & 0:27 \\\hline
+	3:01 - 3:02 & 0:28 \\\hline
+	3:03 & 0:29 \\\hline
+	3:04 - 3:05 & 0:30 \\\hline
+	3:06 & 0:31 \\\hline
+	3:07 - 3:08 & 0:32 \\\hline
+	3:09 & 0:33 \\\hline
+	3:10 & 0:34 \\\hline
+	3:11 & 0:35 \\\hline
+	3:12 - 3:13 & 0:36 \\\hline
 	\end{tabular}\end{minipage}
 		\begin{minipage}{0.5\textwidth}\begin{tabular}[t]{c|c}
 					For mins in range & Add this many minutes \\\hline
-						194 & 37 \\\hline
-					195 & 38 \\\hline
-						196 & 39 \\\hline
-					197 & 40 \\\hline
-					198 & 41 \\\hline
-					199 & 42 \\\hline
-	200 & 43 \\\hline
-	201 & 44 \\\hline
-	202 & 45 \\\hline
-	203 & 46 \\\hline
-	204 & 48 \\\hline
-	205 & 49 \\\hline
-	206 & 50 \\\hline
-	207 & 51 \\\hline
-	208 & 53 \\\hline
-	209 & 54 \\\hline
-	210 & 56 \\\hline
-	211 & 57 \\\hline
-	212 & 59 \\\hline
-	213 & 60 \\\hline
-	214 & 62 \\\hline
-	215 & 64 \\\hline
-	216 & 66 \\\hline
-	217 & 68 \\\hline
-	218 & 70 \\\hline
-	219 & 72 \\\hline
-	220 & 75 \\\hline
-	221 & 78 \\\hline
-	222 & 80 \\\hline
-	223 & 84 \\\hline
-	224 & 87 \\\hline
-	225 & 91 \\\hline
-	226 & 96 \\\hline
-	227 & 101 \\\hline
-	228 & 109 \\\hline
-	229 & 122
+	3:04 & 0:37 \\\hline
+					3:05 & 0:38 \\\hline
+						3:06 & 0:39 \\\hline
+					3:07 & 0:40 \\\hline
+					3:08 & 0:41 \\\hline
+					3:09 & 0:42 \\\hline
+	3:10 & 0:43 \\\hline
+	3:11 & 0:44 \\\hline
+	3:12 & 0:45 \\\hline
+	3:13 & 0:46 \\\hline
+	3:14 & 0:48 \\\hline
+	3:15 & 0:49 \\\hline
+	3:16 & 0:50 \\\hline
+	3:17 & 0:51 \\\hline
+	3:18 & 0:53 \\\hline
+	3:19 & 0:54 \\\hline
+	3:20 & 0:56 \\\hline
+	3:21 & 0:57 \\\hline
+	3:22 & 0:59 \\\hline
+	3:23 & 1:00 \\\hline
+	3:24 & 1:02 \\\hline
+	3:25 & 1:04 \\\hline
+	3:26 & 1:06 \\\hline
+	3:27 & 1:08 \\\hline
+	3:28 & 1:10 \\\hline
+	3:29 & 1:12 \\\hline
+	3:30 & 1:15 \\\hline
+	3:31 & 1:18 \\\hline
+	3:32 & 1:20 \\\hline
+	3:33 & 1:24 \\\hline
+	3:34 & 1:27 \\\hline
+	3:35 & 1:31 \\\hline
+	3:36 & 1:36 \\\hline
+	3:37 & 1:41 \\\hline
+	3:38 & 1:49 \\\hline
+	3:39 & 2:02
 \end{tabular}\end{minipage}\newpage
 
 \section{Time Zone Table}
 
-This is a table of timezones. To obtain the conversion minutes for a location, find the number of degrees for the timezone and subtract the longitude of a location (noting that the longitude will be negative for places in the Western hemisphere). The letters match those sometimes used on maps. A dash in the ``major locations'' column indicates that the only places in this timezone have no territory with a large population. Some time zones that are not a whole numbers of hours offset which have very small populations (such as the Marquesas Islands or Eucla, Australia) are not included, but the degrees can still be obtained by multiplying the UTC offset hours by 15.
+This is a table of timezones. To obtain the conversion minutes for a location, find the number of degrees for the timezone and subtract the longitude of a location (noting that the longitude will be negative for places in the Western hemisphere). The letters match those sometimes used on maps. A dash in the “major locations” column indicates that the only places in this timezone have no territory with a large population. Some time zones that are not a whole numbers of hours offset which have very small populations (such as the Marquesas Islands or Eucla, Australia) are not included, but the degrees can still be obtained by multiplying the UTC offset hours by 15.
 
-DST offsets are not included in this list.  If your location observes Daylight Saving Time, add the DST offset (in nearly all locations this is one hour) when ``summer time'' is in effect.
+DST offsets are not included in this list.  If your location observes Daylight Saving Time, add the DST offset (in nearly all locations this is one hour) when “summer time” is in effect.
 
 \begin{footnotesize}
 \begin{tabular}{c | c | c | p{0.6\textwidth}}
@@ -464,3 +476,47 @@ DST offsets are not included in this list.  If your location observes Daylight S
 	+12:00&M&180°&Kamchatka Time (Russia), Marshall Islands, Tuvalu, Fiji, New Zealand\\\hline
 	+13:00& - &-165°&Samoa, Tonga\\\hline
 \end{tabular}\end{footnotesize}
+
+\section{Sample Calculations}
+
+\subsection{Example 1}
+
+A Jewish passenger aboard the RMS \textit{Titanic} has been among the first rescued in the early morning of April 15 following the ship's sinking. He wants to know whether \textit{misheyakir} is soon enough to be worth staying awake to daven, or if he should nap now. The date is 15 April, and his watch is set to the \textit{Titanic}'s ship's time as of 14 April, which is 2:58 behind GMT.  Because the ship is moving picking up survivors, the position is rounded to approximately 41°N 50°W.
+
+Our passenger is able to borrow the nautical almanac from the bridge while the crew is distracted picking up survivors. The equation of time is zero minutes, and the declination is 10°N. Per the chart, the zero-degree offset is 31 minutes, and the time per degree is 5:22. Since being rescured from a boat that sunk is a exigent circumstance, our protagonist is willing to use a lenient early depression angle of 11°30’, if it enables him to daven soon and then get some sleep.  Per the multiplication table, 5 * 11°30’ (adjusted) is 57:07, and 22 * 11°30’ is 4:11.  31+57+4 yields 1:32. Per the correction table, we must add 3 minutes to this zman, for a total of 1:35.  Since we are looking for a morning zman the result is 1:35 before 6am, or 4:25am solar time (which is equivalent to 4:25am local time since the equation of time is zero).
+
+\textit{Titanic}'s ship's time is not in a time zone, so the time zone offset must be computed manually. Multiply the offset from GMT by 15 to get a number of degrees, so -2:58 times 15 is -44°30'.  The longitude is 50°W (expressed normally as -50°), so the offset for the time zone is four times 5°30', or 24 minutes. Noting the signs in the formula for time zone offset, this time must be subtracted to get our zman.  The result is 4:04am Titanic ship's time.  Since the first passengers were rescued at 4am, \textit{misheyakir} will occur soon, and it is worth davening now before trying to get some sleep.
+
+\subsection{Example 2}
+
+A group of Briskers who keep the ``ochtal" are shipwrecked on Nelsons Island in the Indian Ocean. What time is havdala for them on August 26?  Their position is 5°41′S 72°19′E, and their watches are still set to Israeli summer time from their origin.
+
+As these Briskers lack an almanac, they must use the date table. The zman must be calculated from scratch since all the gavras were too busy looking at a \d{h}eftza to notice when the sun set. The declination on this day is 10°N and the equation of time is two minutes.  From the declination-latitude table, the 0° offset is between 3 and 4 minutes (let's go with 3), and the time per degree is 4:04. In the multiplication table the result of 19°45’ times 4 is 1:17, so the result is one hour seventeen minutes plus one minute seventeen seconds. Rounding to the nearest minute, the result is 1:18. Our selected date is in winter, the total time is 1:18-3, which is 1:15.  Per the correction table, we must add one minute to this time, which yields 1:16, or 7:16pm solar time.  Add 2 minutes from the equation of time, for 7:18pm local time. The UTC offset for Israeli time is +2 hours, but only +1 hours for summer time, which translates to 15° in the time zone table.  15° minus 72°19′ is -56°41′, to convert to minutes multiply by 4, which yields -1:47.  The result is then 5:31pm Israel summer time.
+
+\subsection{Example 3}
+
+A Jewish resident of Tristan da Cunha (37°4′S 12°19′W, observes UTC with no offset) in 2023 wishes to participate in the festivities of Ratting Day on Friday June 2nd, but will need to make sure to know when to light Shabbat candles. Equation of time is -2, declination is 22°N. The offset is 69 minutes (negative since it's wintertime), the minutes per degree is 5:24.  5:24 times 50' works out to about 4:30, let's use 4 minutes to be slightly more stringent so the error in the declination and equation of time won't combine to give us less time before sunset than planned.  -69+4 is 65, to which we add one minute per the correction table.  Sunset is at 4:55pm solar time, which is 4:53pm local time. 12°19′W times four is 49:16, we'll round to 49 minutes (which need to be added, since our location is West of the center of the time zone).  Sunset is at approximately 5:42pm, and with a standard candle lighting time of 18 minutes before sunset, candles should be lit at 5:24.
+
+Since the counting and measuring of rat tails does not take place until 5:30pm, our protagonist will sadly not be present to see who wins the awards for ``most tails" and ``longest tail".
+
+\subsection{Example 4}
+
+Chabad of Rockall (57°36′N 13°41′W, would presumably observe GMT if it had any residents\footnote{Though it is geographically better suited to Cape Verde and Azores time, I'm assuming residents would find it convenient to share a time zone with the UK and Ireland}) has sha\d{h}arit at 10am.  Will this Chabad reach sof zeman tefila on June 18th?
+
+The equation of time is 1 minute, and declination is 23°N.  The 0° offset is 149 minutes (1:29), and the minutes per degree is 7:59 (since close to the solstice declination is a bit higher than 23°N, let's round it to an even 8 minutes).  8 minutes times 50' is 6:40 per the multiplication table.  Since it's summer, both these figures are positive, so the total is 2:37.  To this we must add 16 minutes per the correction table, so a total of 2:53.  This works out to 3:07am solar time.
+
+As noted in the instructions, we can save ourselves some work by calculating the zman in solar time, then converting to local time (and then standard time), taking advantage of the fact that 12 noon is \d{h}atzos.  The time from sunrise to noon is 8:53.  Divided into 6 equal hours yields 1:29.  Two of these proportional hours before noon is 9:02am.
+
+We then add one minute for the equation of time (9:03am).  For the time zone correction, 13°41′ times four is 55 minutes (to be added).  Sof zeman tefila will be 9:58am.  While we have been greatly aided by being a significant distance west of the center of the time zone, our Chabad minyan will unfortunately not make zeman tefila.
+
+\subsection{Example 5}
+
+The hypothetical Jewish community of the Pitcairn Islands (25°S) wants to use a fixed number of minutes after sunset to make havdala, based on how many minutes are needed to get to a depression angle of 8°30' all year round.
+
+The highest value for minutes per degree (at the solstices) is 4:48. Since the absolute highest declination is a little less than 23.5°, let's extrapolate that to 4:49.  
+
+There are two ways to compute the amount of time. First, manually.  Sunset is 50', the adjusted depression angle is 8°28', so we must multiply 4:49 by 7°38'. The result is 28 minutes plus 343 seconds plus 152 seconds plus 31 seconds, or expressed more conventionally, 36:46 (round to 37 minutes).
+
+The multiplication table can also be used.  Using the column for sunset with 4:49, sunset is 3:20 + 41 seconds = 4 minutes after the sun is at 0° (this can be determined even more easily by estimating based on the values for 4 and 5 in the sunset column). Using the 8°30' column, havdala is 33:53 plus 6:54 after 0°, for a total of 41 minutes. Since we're interested in time after sunset, the result is 37 minutes, the same as the previous method.
+
+Before telling everyone to make havdala 37 minutes after sunset, we need to check whether any correction is necessary.  At the summer solstice, when the 0° offset and the time for degrees are both positive, is when the correction factor from the correction table will be highest.  The offset is about 46 minutes, for a total of 1:23. Per the correction table, we'll need to add two minutes, so the standard time for havdala should be 39 minutes after sunset.
